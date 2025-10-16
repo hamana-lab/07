@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+void f(void);
 
-int inc(int counter);
-
-int main(void)
-{
- int i=10;
- printf("before inc i = %d\n", i); 
- i = inc(i);
- printf("after inc i = %d\n", i);
-  
- system("PAUSE");	
- return 0;
  
+
+int main(void){
+    int i;
+    for (i=0;i<5;i++){
+        f();
+    }
+    system("PAUSE");
+    return 0;
 }
 
-int inc(int counter)
-{
-    counter++;
-    return counter;
+void f(void){
+     int i;
+     for (i=0;i<10;i++)
+      printf("#");
 }
